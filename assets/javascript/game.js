@@ -6,7 +6,7 @@ var computerChoice1 = letters[Math.floor(Math.random()*letters.length)];
 var computerChoice2 = letters[Math.floor(Math.random()*letters.length)];
 console.log(computerChoice);
 
-// randomize choice
+
 
 
 
@@ -20,7 +20,7 @@ var lossesText=document.getElementById("losses");
 var chancesText=document.getElementById("guesses");
 var guessText=document.getElementById("yourGuess");
 
-
+//tools
 function reset(){
     document.location.href("");
     
@@ -66,6 +66,7 @@ document.onkeyup= function(event){
     if(chances===0){
         losses++;
         chances=9;
+        computerChoice=computerChoice2;
         guessText.textContent = "Your guesses: "+guesses;
         // reset();
         resetVariable();
